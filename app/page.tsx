@@ -106,30 +106,29 @@ export default function Home() {
 
         {/* Phone único centralizado em mobile */}
         <div className="md:hidden flex justify-center mt-10 pb-2">
-          <div className="relative w-48">
-            <div className="bg-neutral-950 border-[5px] border-neutral-800 rounded-[36px] overflow-hidden shadow-2xl shadow-green-200/30">
-              <div className="relative rounded-[30px] overflow-hidden">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-5 bg-black rounded-b-xl z-10" />
+          <div className="relative w-64">
+            <div className="bg-neutral-950 border-[5px] border-neutral-800 rounded-[44px] overflow-hidden shadow-2xl shadow-green-300/40">
+              <div className="relative rounded-[38px] overflow-hidden">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-6 bg-black rounded-b-xl z-10" />
                 <Image
                   src="/images/home.png"
                   alt="App Vetly"
-                  width={200}
-                  height={430}
+                  width={280}
+                  height={580}
                   className="w-full object-cover object-top"
                 />
               </div>
             </div>
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-36 h-8 bg-green-400/20 blur-2xl rounded-full" />
+            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-48 h-10 bg-green-400/30 blur-2xl rounded-full" />
           </div>
         </div>
       </section>
 
       {/* STATS */}
       <div className="bg-[#0a1f12] py-10 md:py-12 px-6 md:px-12 mt-10 md:mt-0">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 gap-6 md:gap-8 text-center">
           {[
-            { n: "", l: "" },
-            { n: "24h", l: "Atendimento de emergência" },
+            { n: "24h",  l: "Atendimento de emergência" },
             { n: "100%", l: "Gratuito para tutores" },
           ].map((s, i) => (
             <div key={i}>
@@ -182,6 +181,25 @@ export default function Home() {
         <div className="absolute w-96 h-96 bg-green-600 rounded-full opacity-10 blur-3xl -top-32 -right-20" />
         <div className="absolute w-72 h-72 bg-green-400 rounded-full opacity-10 blur-3xl -bottom-20 -left-16" />
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
+
+          {/* Phone mobile — aparece ANTES do texto, só no mobile */}
+          <div className="md:hidden flex justify-center relative">
+            <div className="w-56 bg-black rounded-[40px] border-[5px] border-neutral-800 overflow-hidden shadow-2xl">
+              <div className="relative overflow-hidden rounded-[34px]">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-5 bg-black rounded-b-xl z-10" />
+                <Image
+                  src="/images/emergency.png"
+                  alt="Tela emergência"
+                  width={240}
+                  height={490}
+                  className="w-full object-cover object-top"
+                />
+              </div>
+            </div>
+            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-64 h-10 bg-red-500/25 blur-2xl rounded-full" />
+          </div>
+
+          {/* Texto */}
           <div>
             <span className="inline-block bg-red-500/20 text-red-300 border border-red-500/30 text-xs font-bold uppercase tracking-widest rounded-full px-4 py-1.5 mb-5">
               Emergências
@@ -202,7 +220,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Phone — só em desktop */}
+          {/* Phone desktop — só em md+ */}
           <div className="hidden md:flex justify-center relative">
             <div className="w-52 bg-black rounded-[36px] border-[5px] border-neutral-800 overflow-hidden shadow-2xl">
               <div className="relative overflow-hidden rounded-[30px]">
@@ -218,6 +236,7 @@ export default function Home() {
             </div>
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-64 h-12 bg-red-500/20 blur-2xl rounded-full" />
           </div>
+
         </div>
       </section>
 
