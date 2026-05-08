@@ -105,7 +105,7 @@ export default function Home() {
         </div>
 
         {/* Phone único centralizado em mobile */}
-        <div className="md:hidden flex justify-center mt-10 pb-2">
+        {/* <div className="md:hidden flex justify-center mt-10 pb-2">
           <div className="relative w-64">
             <div className="bg-neutral-950 border-[5px] border-neutral-800 rounded-[44px] overflow-hidden shadow-2xl shadow-green-300/40">
               <div className="relative rounded-[38px] overflow-hidden">
@@ -121,7 +121,7 @@ export default function Home() {
             </div>
             <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-48 h-10 bg-green-400/30 blur-2xl rounded-full" />
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* STATS */}
