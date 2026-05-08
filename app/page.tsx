@@ -99,7 +99,7 @@ export default function Home() {
           </motion.div>
 
           {/* Phones — leque só em desktop */}
-          <div className="hidden md:block">
+          <div className="flex justify-center">
             <AppShowcase />
           </div>
         </div>
